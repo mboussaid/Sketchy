@@ -1,1 +1,40 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../src/sketchy.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../src/sketchy.js"></script>
+    <script>
+        const sketch = new Sketchy({
+            data:{
+                colors:['red','blue','green','yellow','orange','black','purple','cyan'],
+                defaultColor:"green",
+                fileName:"sketch",
+                title:"hello"
+            },
+            events:{
+                onColorClicked(){
+                    console.log('onColorClicked');
+                },
+                onCapture(){
+                    console.log('onCapture');
+                },
+                onRecordStart(){
+                    console.log('onRecordStart')
+                },
+                onRecordStop(){
+                    console.log('onRecordStop')
+                }
+            }
+        });
+        sketch.mount('body')
+    </script>
+</body>
+</html>
