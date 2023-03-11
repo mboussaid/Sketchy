@@ -13,12 +13,6 @@
                 },
                 onCapture(){
                     console.log('onCapture');
-                },
-                onRecordStart(){
-                    console.log('onRecordStart')
-                },
-                onRecordStop(){
-                    console.log('onRecordStop')
                 }
             }
         });
